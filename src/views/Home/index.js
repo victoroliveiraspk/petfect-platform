@@ -1,4 +1,11 @@
 import React from 'react';
+import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
+import FormControl from '@material-ui/core/FormControl';
+import InputLabel from '@material-ui/core/InputLabel';
+import Select from '@material-ui/core/Select';
+import MenuItem from '@material-ui/core/MenuItem';
+import Paper from '@material-ui/core/Paper';
 import './style.css';
 
 export default class Home extends React.Component {
@@ -27,40 +34,45 @@ export default class Home extends React.Component {
                             </ul>
                         </div>
                     </nav>
-                    <div className='form-container'>
+                    <Paper className='paper-form' elevation={3}>
                         <h4 className='h4 text-center'>Fofinho ou bravinho, adote um bichinho By Keke Carneira</h4>
-                        <form>
-                            <div className='form-group'>
-                                <label htmlFor='cidade'>Cidade</label>
-                                <input id='cidade' className='form-control' />
+                        <form className='search-form'>
+                            <div className=''>
+                                <TextField label='Cidade' className='full-width'/>
+                            </div>  
+                            <div className='mt-4'>
+                                <FormControl className='full-width'>
+                                    <InputLabel>Espécie</InputLabel>
+                                    <Select>
+                                        <MenuItem value='gato'>Gato</MenuItem>
+                                        <MenuItem value='cachorro'>Cachorro</MenuItem>
+                                    </Select>
+                                </FormControl>
                             </div>
-                            <div className='form-group'>
-                                    <label htmlFor='especie'>Espécie</label>
-                                    <select id='especie' className='form-control'>
-                                        <option>Gato</option>
-                                        <option>Cachorro</option>
-                                    </select>
-                                </div>
-                            <div className='form-group'>
-                                <label htmlFor='tamanho'>Tamanho</label>
-                                <select id='tamanho' className='form-control'>
-                                    <option>Pequeno</option>
-                                    <option>Médio</option>
-                                    <option>Grande</option>
-                                </select>
+                            <div className='mt-4'>
+                                <FormControl className='full-width'>
+                                    <InputLabel>Porte</InputLabel>
+                                    <Select>
+                                        <MenuItem value='pequeno'>Pequeno</MenuItem>
+                                        <MenuItem value='medio'>Médio</MenuItem>
+                                        <MenuItem value='grande'>Grande</MenuItem>
+                                    </Select>
+                                </FormControl>
                             </div>
-                            <div className='form-group'>
-                                <label htmlFor='genero'>Genero</label>
-                                <select id='genero' className='form-control'>
-                                    <option>Macho</option>
-                                    <option>Fêmea</option>
-                                </select>
+                            <div className='mt-4'>
+                                <FormControl className='full-width'>
+                                    <InputLabel>Gênero</InputLabel>
+                                    <Select>
+                                        <MenuItem value='macho'>Macho</MenuItem>
+                                        <MenuItem value='femea'>Fêmea</MenuItem>
+                                    </Select>
+                                </FormControl>
                             </div>
                         </form>
-                        <button className='btn btn-primary float-right'>
-                            <i className="fas fa-search"></i> Pesquisar
-                        </button>
-                    </div>
+                        <Button variant='contained' color='primary' className='mt-4'>
+                            Pesquisar
+                        </Button>
+                    </Paper>
                 </div>
             </div>
         );
