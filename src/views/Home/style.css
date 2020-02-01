@@ -1,0 +1,21 @@
+.search-banner {
+    background-image: url('../../images/banner5.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+
+.form-container {
+    background-color: #FFFFFF;
+    width: 30%;
+    float: left;
+    margin-top: 50px;
+    /* margin-left: 30px; */
+    padding: 20px;
+    border-radius: 3px;
+}
+
+.nav-link {
+    color: white !important;
+}
